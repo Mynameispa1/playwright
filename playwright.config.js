@@ -24,7 +24,15 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  //reporter: 'html',
+  //reporter:'list',
+  //reporter:'dot',
+  //reporter:'line',
+  //reporter: [['json', { outputFile: 'results.json' }]],
+  //reporter: [['junit', { outputFile: 'results.xml' }]],
+  reporter:[['html'],
+            ['allure-playwright',{ outputfile:'my-allure-results'}]
+          ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -36,7 +44,7 @@ export default defineConfig({
     video:'retain-on-failure'
     
   },
-
+    //timeout:3000,
   /* Configure projects for major browsers */
   projects: [
     {
