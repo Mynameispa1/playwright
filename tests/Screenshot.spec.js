@@ -18,10 +18,19 @@ test('Full screenshot',async({page})=>{
 });
 
 //Perticular area
-test.only('Specific area screenshot',async({page})=>{
+test('Specific area screenshot',async({page})=>{
 
     await page.goto('https://www.demoblaze.com/index.html');
 
     await page.waitForTimeout(2000);
     await page.locator("//body/div[@id='contcont']/div[@class='row']/div[@class='col-lg-9']/div[@id='tbodyid']/div[1]").screenshot({path:'tests\\screenshot\\'+Date.now()+'perticulararea-screenshot.png'});
+});
+
+//Perticular area
+test.only('Specific area screenshot2',async({page})=>{
+
+    await page.goto('https://www.demoblaze.com/index.html');
+
+    await page.waitForTimeout(2000);
+    await page.locator(".navbar-brand").screenshot({path:'tests\\screenshot\\'+Date.now()+'perticulararea2-screenshot.png'});
 });

@@ -17,7 +17,7 @@ test.afterEach(async()=>{
 
 
 //Grouping
-test.describe.only('Group1',()=>{
+test.describe('Group1',()=>{
 
     test('Test1',async({page})=>{
 

@@ -6,6 +6,7 @@ import { defineConfig, devices } from '@playwright/test';
  * https://github.com/motdotla/dotenv
  */
 // import dotenv from 'dotenv';
+require('dotenv').config();   //for reading from env file
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
@@ -20,7 +21,8 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  //retries: process.env.CI ? 2 : 0,
+  retries:0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -31,7 +33,9 @@ export default defineConfig({
   //reporter: [['json', { outputFile: 'results.json' }]],
   //reporter: [['junit', { outputFile: 'results.xml' }]],
   reporter:[['html'],
-            ['allure-playwright',{ outputfile:'my-allure-results'}]
+            //['allure-playwright',{ outputFolder: 'my-allure-results'}],
+            ['json', { outputFile: 'results.json' }],
+            ['junit', { outputFile: 'results.xml' }],
           ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

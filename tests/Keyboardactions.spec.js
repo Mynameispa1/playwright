@@ -11,7 +11,7 @@ test('KeyboardActions',async({page})=>{
     await page.keyboard.press('Control+A');
 
     //Ctrl+C
-    await page.keyboard.press('Control+C'); // Ctrl and C to actions, So we should use press method/function
+    await page.keyboard.press('Control+C'); // Ctrl and C two actions, So we should use press method/function
 
     //Tab
     await page.keyboard.up('Tab');

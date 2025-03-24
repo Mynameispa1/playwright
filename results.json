@@ -16,15 +16,25 @@
     "preserveOutput": "always",
     "reporter": [
       [
+        "html",
+        null
+      ],
+      [
         "json",
         {
           "outputFile": "results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
         }
       ]
     ],
     "reportSlowTests": {
       "max": 5,
-      "threshold": 15000
+      "threshold": 300000
     },
     "quiet": false,
     "projects": [
@@ -32,7 +42,9 @@
         "outputDir": "D:/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "chromium",
         "name": "chromium",
         "testDir": "D:/playwright/tests",
@@ -46,7 +58,9 @@
         "outputDir": "D:/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "firefox",
         "name": "firefox",
         "testDir": "D:/playwright/tests",
@@ -60,7 +74,9 @@
         "outputDir": "D:/playwright/test-results",
         "repeatEach": 1,
         "retries": 0,
-        "metadata": {},
+        "metadata": {
+          "actualWorkers": 1
+        },
         "id": "webkit",
         "name": "webkit",
         "testDir": "D:/playwright/tests",
@@ -74,19 +90,19 @@
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.50.1",
+    "version": "1.51.1",
     "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "Inbuilt-reporters.spec.js",
-      "file": "Inbuilt-reporters.spec.js",
+      "title": "Environment.spec.js",
+      "file": "Environment.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Inbuild-Reporters-1",
+          "title": "test",
           "ok": true,
           "tags": [],
           "tests": [
@@ -99,86 +115,27 @@
               "results": [
                 {
                   "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2605,
+                  "duration": 3005,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "testing...\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-03-17T17:04:06.907Z",
+                  "startTime": "2025-03-24T22:02:59.926Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "f0331e33d9be5392c8f7-d093fbd77db901f9717b",
-          "file": "Inbuilt-reporters.spec.js",
-          "line": 4,
-          "column": 5
-        },
-        {
-          "title": "test2",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 984,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-03-17T17:04:09.767Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f0331e33d9be5392c8f7-7fc209f90b69d62d6f3d",
-          "file": "Inbuilt-reporters.spec.js",
-          "line": 11,
-          "column": 5
-        },
-        {
-          "title": "test3",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1372,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-03-17T17:04:10.756Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "f0331e33d9be5392c8f7-945d3deb6c59e0ac2eb9",
-          "file": "Inbuilt-reporters.spec.js",
-          "line": 17,
+          "id": "feb4881ffbd3a56ed26c-f8e18576fc6a6e8b2743",
+          "file": "Environment.spec.js",
+          "line": 3,
           "column": 5
         }
       ]
@@ -186,9 +143,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-03-17T17:04:05.651Z",
-    "duration": 6730.93,
-    "expected": 3,
+    "startTime": "2025-03-24T22:02:59.192Z",
+    "duration": 4226.667,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
