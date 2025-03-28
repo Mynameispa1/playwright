@@ -1,53 +1,8 @@
-<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="38.020142">
-<testsuite name="DataDrivenusingjsonfile.spec.js" timestamp="2025-03-24T23:31:42.866Z" hostname="chromium" tests="3" failures="1" skipped="0" time="36.195" errors="0">
-<testcase name="Login with multiple Data › Login To Application 1" classname="DataDrivenusingjsonfile.spec.js" time="2.834">
-</testcase>
-<testcase name="Login with multiple Data › Login To Application 2" classname="DataDrivenusingjsonfile.spec.js" time="2.709">
-</testcase>
-<testcase name="Login with multiple Data › Login To Application 3" classname="DataDrivenusingjsonfile.spec.js" time="30.652">
-<failure message="DataDrivenusingjsonfile.spec.js:35:13 Login To Application 3" type="FAILURE">
-<![CDATA[  [chromium] › DataDrivenusingjsonfile.spec.js:35:13 › Login with multiple Data › Login To Application 3 
-
-    Test timeout of 30000ms exceeded.
-
-    Error: locator.click: Test timeout of 30000ms exceeded.
-    Call log:
-      - waiting for getByRole('link', { name: 'Log out' })
-
-
-      43 |             
-      44 |             await page.getByRole('button', { name: 'Log in' }).click();
-    > 45 |             await page.getByRole('link', { name: 'Log out' }).click();
-         |                                                               ^
-      46 |           
-      47 |           });
-      48 |     }
-        at D:\playwright\tests\DataDrivenusingjsonfile.spec.js:45:63
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\DataDrivenusingjsonfile-Lo-e2d03-Data-Login-To-Application-3-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    test-results\DataDrivenusingjsonfile-Lo-e2d03-Data-Login-To-Application-3-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\DataDrivenusingjsonfile-Lo-e2d03-Data-Login-To-Application-3-chromium\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\DataDrivenusingjsonfile-Lo-e2d03-Data-Login-To-Application-3-chromium\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-]]>
-</failure>
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.643676999999999">
+<testsuite name="BookAPI\Accesstoken.spec.js" timestamp="2025-03-28T15:18:47.223Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.62" errors="0">
+<testcase name="Accesstoken for BookAPI" classname="BookAPI\Accesstoken.spec.js" time="0.62">
 <system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\DataDrivenusingjsonfile-Lo-e2d03-Data-Login-To-Application-3-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\DataDrivenusingjsonfile-Lo-e2d03-Data-Login-To-Application-3-chromium\video.webm]]
-
-[[ATTACHMENT|test-results\DataDrivenusingjsonfile-Lo-e2d03-Data-Login-To-Application-3-chromium\trace.zip]]
+<![CDATA[{ error: [32m'API client already registered. Try a different email.'[39m }
 ]]>
 </system-out>
 </testcase>

@@ -12,7 +12,7 @@ test('Get User',async({request})=>{
 });
 
 
-test.only('Create User',async({request})=>{
+test('Create User',async({request})=>{
 
     const response=await request.post('https://reqres.in/api/users',
 

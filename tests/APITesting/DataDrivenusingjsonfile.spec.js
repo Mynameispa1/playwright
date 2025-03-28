@@ -1,10 +1,10 @@
 /*
 
 import { test, expect } from '@playwright/test';
-const json=JSON.parse(JSON.stringify(require('../test-data/datadriven.json')));
+const json=JSON.parse(JSON.stringify(require('../../test-data/datadriven.json')));
 
 
-//login with one testData then we can go as below
+//If you login with one testData then we can go as below
 test('test', async ({ page }) => {
   await page.goto('https://www.demoblaze.com/');
   await page.getByRole('link', { name: 'Log in' }).click();
@@ -25,7 +25,7 @@ test('test', async ({ page }) => {
 //login multiple testData
 
 import { test, expect } from '@playwright/test';
-const jsondata=JSON.parse(JSON.stringify(require('../test-data/datadrivenwithmultipletestData.json')));
+const jsondata=JSON.parse(JSON.stringify(require('../../test-data/datadrivenwithmultipletestData.json')));
 
 
 test.describe('Login with multiple Data',()=>{

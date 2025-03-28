@@ -82,6 +82,7 @@ test.only('Post-Request-Dynamic jsonfile',async({request})=>{
     let res=await response.json();
     console.log(res);
     console.log('Generated Id is: ',res.id);
+    expect(res).toHaveProperty('name',name);
                                     
     
 });
